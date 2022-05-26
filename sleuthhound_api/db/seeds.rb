@@ -6,3 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(first_name: "Autumn", last_name: "Frost", email: "autumn@gmail.com", zipcode: "91355")
+
+
+petfinder = Petfinder::Client.new('e1ZInrpBp5ydoqmqZv1bZGELw81G25V8co94LjwN73zd2U5qc3', 'u8HpPjgqAgkTU04nkYjPyzogCrPJ9CgZnj7FSblR')
+binding.pry
+
+#grant_type=client_credentials
+#client_id={CLIENT-ID}
+#lient_secret={CLIENT-SECRET}"
+#https://api.petfinder.com/v2/oauth2/token
