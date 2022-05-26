@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+
 import { animalReducer } from './animalReducer'
 import { usersReducer } from './usersReducer'
 
