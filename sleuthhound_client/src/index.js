@@ -4,7 +4,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import {BrowserRouter as Router} from 'react-router-dom'
+import {BrowserRouter as Router, Link} from 'react-router-dom'
 
 import App from './components/App'
 import { rootReducer } from './reducers/rootReducer'

@@ -3,21 +3,33 @@ import { Component } from 'react';
 import { connect } from 'react-redux'
 
 import PetsForm from './PetsForm'
+import PetsLister  from './PetsLister'
 import { fetchPets } from '../actions/petsActions'
 
-class PetsContainer extends Component {
 
-    componentDidMount() {
-        this.props.fetchPets()
-    }
+import pic from '../images/sleuthhound.png'
+import pic2 from '../images/sleuthhound_logo.png'
+
+
+
+class PetsContainer extends Component {
 
     render() {
         return(
         <div>
-            <PetsForm />
+             <div id='logo'>
+                <img src={pic}></img>
+                <img src={pic2}></img>
+            </div>
+            <div id='pets-container'>
+                <PetsForm />
+            </div>
+            <div id="pets-lister">
+                <PetsLister />
+            </div>
         </div>
         );
     }
 }
 
-export default connect(null , { fetchPets })(PetsContainer);
+export default PetsContainer;

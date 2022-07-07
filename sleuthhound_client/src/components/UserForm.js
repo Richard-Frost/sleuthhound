@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Navigate } from "react-router-dom"
+import { useNavigate } from 'react-router-dom'
+
 
 import { addUser } from '../actions/usersActions'
 
@@ -8,8 +11,10 @@ class UserForm extends Component {
         first_name: '',
         last_name: '',
         email: '',
-        zipcode: ''                                  
+        zipcode: '',
+        agency_name: ''                                  
     }
+
 
     handleChange = e => {
         const { name, value } = e.target
@@ -21,6 +26,9 @@ class UserForm extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.addUser(this.state)
+        console.log(this.props.history)
+        
+        
     }
     
     render() {
@@ -33,6 +41,8 @@ class UserForm extends Component {
                     <label>Last Name:</label>
                     <input type='text' value={this.state.last_name} onChange={this.handleChange} name="last_name"/>
                     <br />
+                    <label>Agency Name:</label>
+                    <input type='text' value={this.state.agency_name} onChange={this.handleChange} name="agency_name"/>
                     <label>Email:</label>
                     <input type='text' value={this.state.email} onChange={this.handleChange} name="email"/>
                     <br />

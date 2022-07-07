@@ -1,12 +1,15 @@
  import React from 'react';
 
- import UsersContainer from './UsersContainer'
  import PetsContainer from './PetsContainer'
+ import Router from './Router'
+ import Header from './Header'
+ import Home from './Home'
  
  const App = () => {
      return (
-         <div>
-             <PetsContainer />
+         <div id="main">
+             <Header />
+             <Router />
          </div>
      );
  };
