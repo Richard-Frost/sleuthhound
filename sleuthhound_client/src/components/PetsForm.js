@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
 import { fetchPets } from '../actions/petsActions'
 
 
 class PetsForm extends Component {
     state = {
         type: '',
-        zipcode: ''                                 
+        zipcode: ''     
     }
 
     handleChange = e => {
@@ -18,19 +17,18 @@ class PetsForm extends Component {
         })
     }
     handleSubmit = e => {
-        debugger;
         e.preventDefault()
-        console.log(this.props.fetchPets(this.state))
+        this.props.fetchPets(this.state)
     }
     
     render() {
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Type</label>
-                    <input type='text' value={this.state.type} onChange={this.handleChange} name="type" />
+                <label>Type:</label><br />
+                    <input type='text' value={this.props.type} onChange={this.handleChange} name="type" />
                     <br />
-                    <label>Zipcode:</label>
+                    <label>Zipcode:</label><br />
                     <input type='text' value={this.state.zipcode} onChange={this.handleChange} name="zipcode"/>
                     <br />
                     <input type="Submit" defaultValue="Find Pets" /> 
