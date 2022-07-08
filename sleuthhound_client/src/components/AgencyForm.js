@@ -4,18 +4,11 @@ import { Navigate } from "react-router-dom"
 import { useNavigate } from 'react-router-dom'
 
 
-import { addClient } from '../actions/petsActions'
+import { fetchAgency} from '../actions/petsActions'
 
-class ClientForm extends Component {
+class AgencyForm extends Component {
     state = {
-        email: '',
-        name: this.props.name,
-        age: this.props.age,
-        gender: this.props.gender,
-        url: this.props.url,
-        pic: this.props.pic,
-        type: this.props.type,
-        petfinder_id: this.props.petfinder_id                                  
+        email: ''                                 
     }
 
 
@@ -29,8 +22,7 @@ class ClientForm extends Component {
     }
     handleSubmit = e => {
         e.preventDefault()
-        this.props.addClient(this.state)
-        //this.props.navigation    
+        this.props.fetchAgency(this.state) 
     }
     
     render() {
@@ -39,10 +31,10 @@ class ClientForm extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>Email:</label>
                     <input type='text' value={this.state.email} onChange={this.handleChange} name="email" />
-                    <input type="Submit" defaultValue="Add Client" /> 
+                    <input type="Submit" defaultValue="View Agency" /> 
                 </form>
             </div>
         );
     }
 }
-export default connect(null, { addClient } )(ClientForm);
+export default connect(null, { fetchAgency } )(AgencyForm);

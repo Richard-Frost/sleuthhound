@@ -4,6 +4,7 @@ import Home from './Home'
 import PetsForm from './PetsForm'
 import UserForm from './UserForm'
 import PetsContainer from './PetsContainer'
+import AgencyContainer from './AgencyContainer';
 
 const Router = () => {
     return (
@@ -12,6 +13,7 @@ const Router = () => {
            <Route exact path='/pets' element={<Home />} />
            <Route exact path='/petsform' element={<PetsContainer />} />
            <Route exact path='/signup' element={<UserForm />} />
+           <Route exact path='/agency' element={<AgencyContainer />} />
 
        </Routes>
     );

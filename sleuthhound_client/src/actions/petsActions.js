@@ -35,3 +35,15 @@ export const addClient = pet => {
      .then(client => dispatch({type: "ADD_CLIENT", payload: pet}))
     }
 }
+
+export const fetchAgency = agency => {
+    return dispatch => {
+     fetch('http://127.0.0.1:3001/agency',  {
+        method: 'POST',
+        body: JSON.stringify(agency),
+        headers: { 'Content-Type': 'application/json'}
+    })
+     .then(resp => resp.json())
+     .then(agency => dispatch({type: "FETCH_AGENCY", payload: agency}))
+    }
+}
