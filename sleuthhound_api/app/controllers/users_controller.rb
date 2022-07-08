@@ -1,6 +1,13 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
+  
+  def agency
+    @user = User.find_by(email: params[:email])
+    @agency = @user.clients
+    render json: @agency 
+  end
+  
   # GET /users
   def index
     @users = User.all

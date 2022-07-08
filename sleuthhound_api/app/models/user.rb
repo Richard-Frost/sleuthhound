@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_many :animals
+    has_many :clients
 end
 
 
