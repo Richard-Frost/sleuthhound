@@ -1,10 +1,9 @@
 import { Component } from 'react';
-//import React from 'react '
-import { connect } from 'react-redux'
+//import { connect } from 'react-redux'
 
 import PetsForm from './PetsForm'
 import PetsLister  from './PetsLister'
-import { fetchPets } from '../actions/petsActions'
+//import { fetchPets } from '../actions/petsActions'
 
 
 import pic from '../images/sleuthhound.png'
