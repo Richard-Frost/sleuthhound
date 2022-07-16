@@ -6,23 +6,17 @@ import { connect } from 'react-redux'
 const AgencyLister = ( {agency} ) => {
   
     return (
-        <div class="pets-container">
-            <h1>helllo?</h1>
-            {agency.map( client => <div id="pets"><p>name: {client.name}</p> <img key={client.id} src={client.pic} alt={client.name}/></div>) }
-           
-    
+        <div>
+            {agency.map( client => <div class="flex-container prospect-lister">
+                <img id="prospect-image" key={client.id} src={client.pic} alt={client.name}/>
+                <p>name: {client.name}</p> 
+                <a href={client.url}>View on Petfinder</a><br /></div>) }
+                
         </div>
     );  
 };
 
-
-
-
-
-
-
 const mapStateToProps = state => {
-    //console.log(state.agency)
     return { agency: state.agency }
 }
 

@@ -1,6 +1,6 @@
-export const animalReducer = (state = [], action) => {
+export const prospectsReducer = (state = [], action) => {
     switch(action.type){
-        case 'FETCH_ANIMALS':
+        case 'FETCH_PROSPECTS':
             return action.payload[0]
         case 'ADD_CLIENT':
             return [...state, action.payload]

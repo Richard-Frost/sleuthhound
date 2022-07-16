@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PetsContainer from './PetsContainer'
+import ProspectContainer from './ProspectContainer'
 import pic from '../images/sleuthhound.png'
 import pic2 from '../images/sleuthhound_logo.png'
 import {BrowserRouter as Router, Link} from 'react-router-dom'
@@ -10,18 +10,17 @@ import AgencyContainer from './AgencyContainer'
 const Home = () => {
 
     return (
-        <div>
-            <div id='logo'>
-                <img src={pic}></img>
-                <img src={pic2}></img>
+        <div className="flex-container">
+            <div classsName="flex-container">
+                <img id="logo" src={pic}></img>
+                    <div class="container">
+                        <Button url={"/prospectform"} button_type={"button-dog"} text="Search for Dogs" type="dog"/>
+                        <Button url={"/prospectform"} button_type={"button-cat"} text="Search for Cats" type="cat" />
+                        <Button url={"/signup"} type="signup" text="Signup"/>
+                        <Button url={"/agency"} text="View your Agency" />
+                    </div>
+                </div>
             </div>
-            <div class="container">
-                <Button url={"/petsform"} text="Dogs" type="dog"/>
-                <Button url={"/petsform"} text="Cat" type="cat" />
-                <Button url={"/signup"} text="Signup - Become a Sleuthound" />
-                <Button url={"/agency"} text="View your Agency" />
-            </div>
-        </div>
     );
 };
 

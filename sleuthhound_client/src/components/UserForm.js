@@ -25,15 +25,30 @@ class UserForm extends Component {
     }
     handleSubmit = e => {
         e.preventDefault()
-        this.props.addUser(this.state)
-        console.log(this.props.history)
-        
-        
+        this.props.addUser(this.state)     
     }
     
     render() {
         return(
-            <div>
+            <div className="flex-container">
+                 <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                <div className="flex-container">
+                    <div className="container">
+                       
                 <form onSubmit={this.handleSubmit}>
                     <label>First Name:</label>
                     <input type='text' value={this.state.first_name} onChange={this.handleChange} name="first_name" />
@@ -51,6 +66,8 @@ class UserForm extends Component {
                     <br />
                     <input type="Submit" defaultValue="Create User" /> 
                 </form>
+                </div>
+                </div>
             </div>
         );
     }
