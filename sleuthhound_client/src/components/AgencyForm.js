@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom"
 import { useNavigate } from 'react-router-dom'
 
 
-import { fetchAgency} from '../actions/petsActions'
+import { fetchAgency} from '../actions/prospectActions'
 
 class AgencyForm extends Component {
     state = {
@@ -22,12 +22,13 @@ class AgencyForm extends Component {
     }
     handleSubmit = e => {
         e.preventDefault()
+        debugger;
         this.props.fetchAgency(this.state) 
     }
     
     render() {
         return(
-            <div>
+            <div className="flex-container">
                 <form onSubmit={this.handleSubmit}>
                     <label>Email:</label>
                     <input type='text' value={this.state.email} onChange={this.handleChange} name="email" />

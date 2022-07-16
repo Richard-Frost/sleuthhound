@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom"
 import { useNavigate } from 'react-router-dom'
 
 
-import { addClient } from '../actions/petsActions'
+import { addClient } from '../actions/prospectActions'
 
 class ClientForm extends Component {
     state = {

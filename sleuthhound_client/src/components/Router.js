@@ -1,19 +1,23 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Home'
-import PetsForm from './PetsForm'
+import ProspectForm from './ProspectForm'
 import UserForm from './UserForm'
-import PetsContainer from './PetsContainer'
+import ProspectContainer from './ProspectContainer'
 import AgencyContainer from './AgencyContainer';
+import Welcome from './Welcome'
+import About from './About'
 
 const Router = () => {
     return (
        <Routes>
-           <Route exact path='/' element={<Home />} />
+           <Route exact path='/home' element={<Home />} />
            <Route exact path='/pets' element={<Home />} />
-           <Route exact path='/petsform' element={<PetsContainer />} />
+           <Route exact path='/prospectform' element={<ProspectContainer />} />
            <Route exact path='/signup' element={<UserForm />} />
            <Route exact path='/agency' element={<AgencyContainer />} />
+           <Route exact path='/' element={<Welcome />} />
+           <Route exact path='/about' element={<About />} />
 
        </Routes>
     );

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchPets } from '../actions/petsActions'
+import { fetchProspects } from '../actions/prospectActions'
 
 
-class PetsForm extends Component {
+class ProspectForm extends Component {
     state = {
         type: '',
         zipcode: ''     
@@ -18,12 +18,12 @@ class PetsForm extends Component {
     }
     handleSubmit = e => {
         e.preventDefault()
-        this.props.fetchPets(this.state)
+        this.props.fetchProspects(this.state)
     }
     
-    render() {
+    render() {debugger;
         return(
-            <div>
+            <div className="flex-container">
                 <form onSubmit={this.handleSubmit}>
                 <label>Type:</label><br />
                     <input type='text' value={this.props.type} onChange={this.handleChange} name="type" />
@@ -31,10 +31,10 @@ class PetsForm extends Component {
                     <label>Zipcode:</label><br />
                     <input type='text' value={this.state.zipcode} onChange={this.handleChange} name="zipcode"/>
                     <br />
-                    <input type="Submit" defaultValue="Find Pets" /> 
+                    <input type="Submit" defaultValue="Find Prospects" /> 
                 </form>
             </div>
         );
     }
 }
-export default connect(null, { fetchPets } )(PetsForm);
+export default connect(null, { fetchProspects } )(ProspectForm);
