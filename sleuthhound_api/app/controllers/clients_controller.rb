@@ -18,9 +18,6 @@ class ClientsController < ApplicationController
     @user = User.find_by(email: params[:email])
     @client = Client.new(client_params)
     @client.user_id = @user.id
-    
-    binding.pry
-
     if @client.save
       render json: @client, status: :created, location: @client
     else
