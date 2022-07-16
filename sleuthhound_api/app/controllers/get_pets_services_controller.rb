@@ -3,24 +3,25 @@ class GetPetsServicesController < ApplicationController
 
   # GET /get_pets_services
   def index
-    binding.pry
     @get_pets_services = GetPetsService.new.fetch_pets
-    binding.pry
     render json: @get_pets_services
   end
 
   # GET /get_pets_services/1
   def show
-    binding.pry
     render json: @get_pets_service
   end
 
   # POST /get_pets_services
   def create
-    @get_pets_services = GetPetsService.new.fetch_pets(get_pets_service_params)
+    @get_pets_services = GetPetsService.new.fetch_pets(params)
     render json: @get_pets_services
   end
 
+  def pets
+    @get_pets_services = GetPetsService.new.fetch_pets(get_pets_service_params)
+    render json: @get_pets_services
+  end
   # PATCH/PUT /get_pets_services/1
   def update
     if @get_pets_service.update(get_pets_service_params)
@@ -43,6 +44,6 @@ class GetPetsServicesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def get_pets_service_params
-      params.require(:get_pets_service).permit(:type, :age, :zipcode, :status)
+      params.permit(:get_pets_service_params, :type, :age, :zipcode, :status)
     end
 end
