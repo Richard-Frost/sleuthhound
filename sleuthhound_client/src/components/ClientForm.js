@@ -25,12 +25,10 @@ class ClientForm extends Component {
         this.setState({
             [name]: value
         })
-        console.log("STATE: ", this.state)
     }
     handleSubmit = e => {
         e.preventDefault()
         this.props.addClient(this.state)
-        //this.props.navigation    
     }
     
     render() {

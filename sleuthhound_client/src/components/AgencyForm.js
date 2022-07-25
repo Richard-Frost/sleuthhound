@@ -2,16 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Navigate } from "react-router-dom"
 import { useNavigate } from 'react-router-dom'
-
-
 import { fetchAgency} from '../actions/prospectActions'
 
 class AgencyForm extends Component {
     state = {
         email: ''                                 
     }
-
-
+    
     handleChange = e => {
         const { name, value } = e.target
 
@@ -20,9 +17,9 @@ class AgencyForm extends Component {
         })
         console.log("STATE: ", this.state)
     }
+    
     handleSubmit = e => {
         e.preventDefault()
-        debugger;
         this.props.fetchAgency(this.state) 
     }
     

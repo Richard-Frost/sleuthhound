@@ -10,9 +10,7 @@
         <div id="main">
             <Header />
             <div className="flex-container">
-        
-                    <Router />
-             
+                <Router />
             </div>
         </div>
      );

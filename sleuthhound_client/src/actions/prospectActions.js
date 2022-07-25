@@ -1,5 +1,5 @@
 
-export const fetchProspects = prospects => { 
+export const fetchProspects = prospects => { debugger;
     return dispatch => {
      fetch(`http://127.0.0.1:3001/prospects?zipcode=${prospects.zipcode}&type=${prospects.type}`,  {
         method: 'GET',
@@ -9,6 +9,29 @@ export const fetchProspects = prospects => {
      .then(prospects => dispatch({type: "FETCH_PROSPECTS", payload: prospects}))
     } 
 }
+
+
+
+
+export const fetchPets = pets => {
+    return dispatch => {
+     fetch('http://127.0.0.1:3001/pets',  {
+        method: 'POST',
+        body: JSON.stringify(pets),
+        headers: { 'Content-Type': 'application/json'}
+    })
+     .then(resp => resp.json())
+     .then(pets => dispatch({type: "FETCH_ANIMALS", payload: pets}))
+    }
+    
+}
+
+
+
+
+
+
+
 
 export const addClient = pet => {
     return dispatch => {
@@ -32,3 +55,7 @@ export const fetchAgency = agency => {
      .then(agency => dispatch({type: "FETCH_AGENCY", payload: agency}))
     }
 }
+//export const setSpecies = species => { 
+//    return {type: "SET_SPECIES", payload: species} 
+//}
+

@@ -21,7 +21,7 @@ class ProspectForm extends Component {
         this.props.fetchProspects(this.state)
     }
     
-    render() {debugger;
+    render() {
         return(
             <div className="flex-container">
                 <form onSubmit={this.handleSubmit}>
@@ -37,4 +37,6 @@ class ProspectForm extends Component {
         );
     }
 }
+
+
 export default connect(null, { fetchProspects } )(ProspectForm);

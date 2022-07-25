@@ -7,6 +7,6 @@ import { agencyReducer } from './agencyReducer'
 export const rootReducer = combineReducers({
     prospects: prospectsReducer,
     users: usersReducer,
-    agency: agencyReducer
+    agency: agencyReducer,
 })
 

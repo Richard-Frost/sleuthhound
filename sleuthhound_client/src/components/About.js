@@ -1,9 +1,5 @@
 import React from 'react';
-
-
 import pic from '../images/sleuthhound.png'
-import pic2 from '../images/sleuthhound_logo.png'
-import {BrowserRouter as Router, Link} from 'react-router-dom'
 import Button from './Button'
 
 const About = () => {

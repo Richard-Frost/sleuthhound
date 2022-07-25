@@ -1,31 +1,29 @@
 import { Component } from 'react';
 //import { connect } from 'react-redux'
-
+import { useLocation } from 'react-router-dom'
 import ProspectForm from './ProspectForm'
 import ProspectLister  from './ProspectLister'
-//import { fetchProspect } from '../actions/ProspectActions'
+import ProspectFormHooks from './ProspectFormHooks'
+
  
 
-import pic from '../images/sleuthhound.png'
-import pic2 from '../images/sleuthhound_logo.png'
+import dog from '../images/sleuthhound.png'
+import cat from '../images/catlogo.png'
 
 
 
-class ProspectContainer extends Component {
+const ProspectContainer = () =>  {
 
-    render() {
-        return(
+    const location = useLocation() 
+    const type = new URLSearchParams(location.search).get("type")
+    
+    return(
             <div classsName="flex-container">
-                <img id="logo" src={pic}></img>
-                   
-                        <ProspectForm />
-                        <ProspectLister />
-                  
-                
-            
-        </div>
+                <img id="logo" src={type === 'dog' ? dog : cat}></img>
+                    <ProspectFormHooks prospectType={type} />
+                    <ProspectLister />
+            </div>
         );
-    }
 }
 
 export default ProspectContainer;

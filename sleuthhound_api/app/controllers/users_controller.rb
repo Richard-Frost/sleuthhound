@@ -2,9 +2,14 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
   
+#user has_many :clients
+#clients belongs_to :user
+
+  # localhost:3000/agency?email=mail@mail.com
   def agency
     @user = User.find_by(email: params[:email])
     @agency = @user.clients
+    
     render json: @agency 
   end
   
