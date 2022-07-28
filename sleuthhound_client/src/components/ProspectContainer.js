@@ -1,7 +1,5 @@
-import { Component } from 'react';
-//import { connect } from 'react-redux'
+import React from 'react';
 import { useLocation } from 'react-router-dom'
-import ProspectForm from './ProspectForm'
 import ProspectLister  from './ProspectLister'
 import ProspectFormHooks from './ProspectFormHooks'
 
@@ -18,12 +16,17 @@ const ProspectContainer = () =>  {
     const type = new URLSearchParams(location.search).get("type")
     
     return(
+            <div className="flex-container">
+                <div classsName="flex-container">
+                    <img id="logo" src={type === 'dog' ? dog : cat}></img>
+                </div>
             <div classsName="flex-container">
-                <img id="logo" src={type === 'dog' ? dog : cat}></img>
-                    <ProspectFormHooks prospectType={type} />
-                    <ProspectLister />
+                <ProspectFormHooks prospectType={type} />
+                <ProspectLister />
             </div>
-        );
+            
+        </div>
+    );
 }
 
 export default ProspectContainer;

@@ -12,8 +12,7 @@ const AgencyLister = () => {
             {agency.map( client => <div class="flex-container prospect-lister">
                 <img id="prospect-image" key={client.id} src={client.pic} alt={client.name}/>
                 <p>name: {client.name}</p> 
-                <a href={client.url}>View on Petfinder</a><br /></div>) }
-                
+                <a href={client.url}>View on Petfinder</a><br /></div>) }   
         </div>
     );  
 };

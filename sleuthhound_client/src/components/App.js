@@ -9,9 +9,7 @@
      return (
         <div id="main">
             <Header />
-            <div className="flex-container">
-                <Router />
-            </div>
+            <Router />
         </div>
      );
  };

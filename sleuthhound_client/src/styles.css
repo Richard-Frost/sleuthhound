@@ -43,6 +43,7 @@ h1 {
   justify-content: center;
 }
 
+
 #logo {
   width: 500px;
   height: auto;
@@ -90,6 +91,8 @@ h1 {
   overflow: hidden;
   margin: none;
   padding: none;
+  background-color: rgb(249, 255, 255);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24)
 }
 
 #prospect-image {

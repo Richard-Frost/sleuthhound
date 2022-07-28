@@ -4,13 +4,14 @@ import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { fetchAgency} from '../actions/prospectActions'
 
-const AgencyFormHooks = (props) => {
+const AgencyFormHooks = () => {
 
     const dispatch = useDispatch();
-    const [email, setEmail] = useState();
-    const onSubmit = (e) => {
+    const [email, setEmail] = useState("");
+    const handleSubmit = (e) => {
         e.preventDefault();
         const agency = {email: email}
+        console.log(agency)
         dispatch(fetchAgency(agency))
     }
 
@@ -18,7 +19,7 @@ const AgencyFormHooks = (props) => {
         <div className="flex-container">
             <form onSubmit={e => {handleSubmit(e)} }>
                 <label>Email:</label>
-                <input type='text' value={this.state.email} onChange={this.handleChange} name="email" />
+                <input type='text' value={email} onChange={(e) => setEmail(e.target.value)} name="email" />
                 <input type="Submit" defaultValue="View Agency" /> 
             </form>
         </div>
@@ -26,3 +27,4 @@ const AgencyFormHooks = (props) => {
 }
 
 export default AgencyFormHooks;
+

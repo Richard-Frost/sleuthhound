@@ -5,12 +5,13 @@ import Button from './Button'
 const About = () => {
 
     return (
-        <div className="flex-container container-plain">
-            
+        <div className="flex-container ">
             <img id="logo" src={pic}></img>
-                <h3>Welcome to Sleuthhound!</h3><br/>
-                <p>This is a place to become a pet detective and help find furever homes for dogs and cats. Browse through available dogs and cats in your blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+            <h3>Welcome to Sleuthhound!</h3>
+            <div className="container-plain">
+                <p>Sleuthhound is a place where you become a pet dective searching for humans and furever homes for your furry clients. </p><br/>
                 <Button url={"/home"} text="Enter" type="enter"/>
+            </div>
         </div>
     );
 };
