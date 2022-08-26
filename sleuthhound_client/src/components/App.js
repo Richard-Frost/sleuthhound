@@ -1,15 +1,14 @@
  import React from 'react';
-
- import ProspectContainer from './ProspectContainer'
  import Router from './Router'
  import Header from './Header'
- import Home from './Home'
+ import Footer from './Footer'
  
  const App = () => {
      return (
         <div id="main">
             <Header />
             <Router />
+            <Footer />
         </div>
      );
  };

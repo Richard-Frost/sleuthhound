@@ -2,13 +2,8 @@ import React from 'react';
 import { useLocation } from 'react-router-dom'
 import ProspectLister  from './ProspectLister'
 import ProspectFormHooks from './ProspectFormHooks'
-
- 
-
 import dog from '../images/sleuthhound.png'
 import cat from '../images/catlogo.png'
-
-
 
 const ProspectContainer = () =>  {
 
@@ -24,7 +19,6 @@ const ProspectContainer = () =>  {
                 <ProspectFormHooks prospectType={type} />
                 <ProspectLister />
             </div>
-            
         </div>
     );
 }

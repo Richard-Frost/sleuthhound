@@ -1,14 +1,5 @@
-export const fetchUsers = () => {
-
-    return (dispatch) => {
-        fetch('http://127.0.0.1:3001/users')
-        .then(resp => resp.json())
-        .then(users => dispatch({type: "FETCH_USERS", payload: users}))
-    }
-}
-
-    export const addUser = user => {
-       return dispatch => {
+export const addUser = user => {
+    return dispatch => {
         fetch('http://127.0.0.1:3001/users', {
             method: 'POST',
             body: JSON.stringify(user),
@@ -16,7 +7,6 @@ export const fetchUsers = () => {
         })
         .then(resp => resp.json())
         .then(user => dispatch({type: "ADD_USER", payload: user}))
-       }
-
     }
+}
 

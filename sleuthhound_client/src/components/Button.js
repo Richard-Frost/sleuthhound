@@ -5,52 +5,26 @@ import catpic from '../images/catguitar.png'
 import signup from '../images/friends.png'
 import view from '../images/view.png'
 
+const icon = (pic) => {
+    if (pic === "button-dog") {
+        return dogpic
+    } else if (pic === "button-cat") {
+        return catpic
+    } else if (pic === "signup") {
+        return signup
+    } else if (pic === "agency") {
+        return view
+    }
+}
+
 const Button = props => {
-    switch(props.type){
-        case 'dog':
             return  <div class="btn">
                     <Link to={props.url}>
                         <button className={`button-item ${props.button_type}`} onClick={props.onClick}>
-                            <img id="btn-img" src={dogpic}>
+                            <img id="btn-img" src={icon(props.button_type)}>
                             </img>{props.text}
                         </button>
                     </Link>
                     </div>
-        case 'cat':
-            return  <div class="btn">
-                        <Link to={props.url}>
-                        <button className={`button-item ${props.button_type}`} onClick={props.onClick}>
-                            <img id="btn-img" src={catpic}>
-                            </img>{props.text}
-                        </button>
-                        </Link>
-                    </div>
-        case 'signup':
-            return  <div class="btn">
-                        <Link to={props.url}>
-                        <button className={`button-item ${props.button_type}`} onClick={props.onClick}>
-                            <img id="btn-img" src={signup}>
-                            </img>{props.text}
-                        </button>
-                        </Link>
-                    </div>
-        case 'agency':
-            return  <div class="btn">
-                        <Link to={props.url}>
-                        <button className={`button-item ${props.button_type}`} onClick={props.onClick}>
-                            <img id="btn-img" src={view}>
-                            </img>{props.text}
-                                    </button>
-                                    </Link>
-                                </div>
-        default: 
-            return <div class="btn">
-                        <Link to={props.url}>
-                            <button className={`button-item ${props.button_type}`} onClick={props.onClick}>
-                                {props.text}
-                            </button>
-                        </Link>
-                    </div>
-    }
 }
 export default Button; 

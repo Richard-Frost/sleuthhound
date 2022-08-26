@@ -1,6 +1,5 @@
 import React from 'react';
 import pic from '../images/sleuthhound.png'
-import {BrowserRouter as Router, Link} from 'react-router-dom'
 import Button from './Button'
 import AgencyContainer from './AgencyContainer'
 

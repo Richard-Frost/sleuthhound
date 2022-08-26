@@ -11,7 +11,6 @@ const AgencyFormHooks = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const agency = {email: email}
-        console.log(agency)
         dispatch(fetchAgency(agency))
     }
 

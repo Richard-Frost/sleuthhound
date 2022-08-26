@@ -1,4 +1,5 @@
-import { Component } from 'react';
+import React from 'react';
+import {FacebookShareButton, FacebookIcon} from "react-share";
 import AgencyFormHooks from './AgencyFormHooks'
 import AgencyLister from './AgencyLister'
 import pic from '../images/sleuthhound.png'

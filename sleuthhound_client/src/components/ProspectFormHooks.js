@@ -13,7 +13,7 @@ const ProspectFormHooks = (props) => {
         dispatch(fetchProspects(prospects))
       }
     return(
-        <div className="flex-container">
+        <div className="flex-container container-form">
             <form onSubmit={e => {handleSubmit(e)} }>
                 <input type="hidden" value={props.prospectType}/>
                 <label>Zipcode:</label><br />

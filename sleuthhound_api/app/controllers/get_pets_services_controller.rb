@@ -44,7 +44,6 @@ class GetPetsServicesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def get_pets_service_params
-
-      params.permit(:get_pets_service_params, :type, :age, :zipcode, :status)
+      params.permit(:get_pets_service, :type, :age, :zipcode, :status)
     end
 end

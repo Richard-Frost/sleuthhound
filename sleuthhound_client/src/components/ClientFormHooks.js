@@ -10,15 +10,17 @@ const ClientFormHooks = (props) => {
     const [email, setEmail] = useState("")             
     const handleSubmit= (e) => {
         e.preventDefault()
+        const {name, age, gender, url, pic, type, petfinder_id } = props
+
         const client = { 
             email: email,
-            name: props.name,
-            age: props.age,
-            gender: props.gender,
-            url: props.url,
-            pic: props.pic,
-            type: props.type,
-            petfinder_id: props.petfinder_id
+            name,
+            age,
+            gender,
+            url,
+            pic,
+            type,
+            petfinder_id
         }
         dispatch(addClient(client))
         navigate('/home');
